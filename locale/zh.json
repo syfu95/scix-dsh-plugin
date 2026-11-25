@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "title": "SciX 文献助手",
+    "description": "检索 ADS/SciX 天文学文献,分析引用网络,阅读 arXiv 正文文本(仅文本,绝不下载 PDF),并确定性导出 BibTeX/AASTeX/RIS 引用;使用你自己的免费 ADS API Token。",
+    "detail": "docs/DETAIL.zh.md"
+  },
+  "ui": {
+    "sectionLabel": "SciX API Token 设置",
+    "tokenLabel": "API Token",
+    "tokenHint": "在 ADS/SciX 个人设置页生成免费 Token 后填入此处。Token 仅保存在本机凭据存储中,不会写入插件配置,保存后不再显示原文。",
+    "tokenPage": "获取 ADS Token",
+    "tokenPlaceholder": "粘贴你的 ADS/SciX API Token",
+    "save": "保存",
+    "saving": "保存中…",
+    "verify": "验证",
+    "verifying": "验证中…",
+    "remove": "移除",
+    "removing": "移除中…",
+    "saved": "Token 已保存。",
+    "removed": "Token 已移除。",
+    "tokenStored": "已存储 Token",
+    "tokenAbsent": "尚未存储 Token",
+    "tokenSource": "(来源:{source})",
+    "notWritable": "当前凭据来源不可写,无法在此保存或移除。",
+    "errEmpty": "请先输入非空 Token。",
+    "saveFailed": "保存失败:{message}",
+    "removeFailed": "移除失败:{message}",
+    "describeFailed": "无法读取凭据状态:{message}",
+    "verifyUnavailable": "验证服务不可用:请确认插件已启用且 Host 核心已加载。",
+    "verifyFailed": "验证调用失败:{message}",
+    "verifyOk": "Token 有效。",
+    "verifyBad": "Token 验证未通过。",
+    "loading": "正在读取凭据状态…"
+  }
+}

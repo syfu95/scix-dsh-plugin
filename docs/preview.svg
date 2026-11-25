@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="300" viewBox="0 0 640 300" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <rect x="8" y="8" width="624" height="284" rx="16" fill="#f7f9fc" stroke="#d7dee9" stroke-width="1.5"/>
+  <text x="40" y="50" font-size="21" font-weight="700" fill="#26303f">SciX 文献助手 · SciX Literature Assistant</text>
+  <text x="40" y="72" font-size="12.5" fill="#5c6779">检索 ADS/SciX · 引用网络分析 · arXiv 正文阅读(仅文本,无 PDF)</text>
+
+  <rect x="40" y="92" width="156" height="132" rx="12" fill="#ffffff" stroke="#d7dee9" stroke-width="1.5"/>
+  <circle cx="78" cy="126" r="12" fill="none" stroke="#247bbf" stroke-width="3"/>
+  <path d="M87 135 L97 145" fill="none" stroke="#247bbf" stroke-width="3" stroke-linecap="round"/>
+  <rect x="60" y="158" width="116" height="10" rx="5" fill="#dbe7f4"/>
+  <rect x="60" y="178" width="116" height="8" rx="4" fill="#c3d4e8"/>
+  <rect x="60" y="192" width="96" height="8" rx="4" fill="#c3d4e8"/>
+  <rect x="60" y="206" width="108" height="8" rx="4" fill="#c3d4e8"/>
+  <text x="118" y="246" font-size="13" fill="#3a4557" text-anchor="middle">检索 · Search</text>
+
+  <path d="M202 158 L234 158 M226 152 L236 158 L226 164" fill="none" stroke="#8a93a6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="242" y="92" width="156" height="132" rx="12" fill="#ffffff" stroke="#d7dee9" stroke-width="1.5"/>
+  <path d="M320 150 L272 120 M320 150 L366 118 M320 150 L264 186 M320 150 L372 184 M320 150 L320 204 M366 118 L372 184" fill="none" stroke="#9db6d2" stroke-width="2"/>
+  <circle cx="272" cy="120" r="6" fill="#247bbf"/>
+  <circle cx="366" cy="118" r="6" fill="#247bbf"/>
+  <circle cx="264" cy="186" r="6" fill="#247bbf"/>
+  <circle cx="372" cy="184" r="6" fill="#247bbf"/>
+  <circle cx="320" cy="204" r="5" fill="#247bbf"/>
+  <circle cx="320" cy="150" r="9" fill="#e8a33d"/>
+  <text x="320" y="246" font-size="13" fill="#3a4557" text-anchor="middle">引用 · Citations</text>
+
+  <path d="M404 158 L436 158 M428 152 L438 158 L428 164" fill="none" stroke="#8a93a6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="444" y="92" width="156" height="132" rx="12" fill="#ffffff" stroke="#d7dee9" stroke-width="1.5"/>
+  <rect x="470" y="106" width="104" height="104" rx="8" fill="#eef4fb" stroke="#c3d4e8" stroke-width="1.5"/>
+  <rect x="484" y="120" width="40" height="7" rx="3.5" fill="#247bbf"/>
+  <rect x="484" y="136" width="76" height="6" rx="3" fill="#8fa9c6"/>
+  <rect x="484" y="148" width="64" height="6" rx="3" fill="#8fa9c6"/>
+  <rect x="484" y="160" width="72" height="6" rx="3" fill="#8fa9c6"/>
+  <rect x="484" y="172" width="58" height="6" rx="3" fill="#8fa9c6"/>
+  <rect x="484" y="188" width="34" height="14" rx="7" fill="#2e7d5b"/>
+  <text x="501" y="198.5" font-size="9" font-weight="700" fill="#ffffff" text-anchor="middle">TXT</text>
+  <rect x="524" y="188" width="36" height="14" rx="7" fill="none" stroke="#b04a3a" stroke-width="1.5"/>
+  <text x="542" y="198.5" font-size="9" font-weight="700" fill="#b04a3a" text-anchor="middle">PDF</text>
+  <path d="M527 200 L557 190" fill="none" stroke="#b04a3a" stroke-width="1.5" stroke-linecap="round"/>
+  <text x="522" y="246" font-size="13" fill="#3a4557" text-anchor="middle">正文 · Text</text>
+
+  <text x="40" y="272" font-size="11.5" fill="#5c6779">Your own ADS token · deterministic citation export · plugin-enforced rate limits (15/s, 3000/day)</text>
+</svg>

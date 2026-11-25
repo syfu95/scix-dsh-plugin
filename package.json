@@ -1,0 +1,40 @@
+{
+  "name": "scix-dsh-plugin",
+  "version": "0.1.0",
+  "private": true,
+  "description": "SciX/NASA ADS literature query tools for DeepSeek Harness.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "dsh": ">=0.2.0 <0.3.0"
+  },
+  "exports": {
+    ".": "./src/index.js",
+    "./client": "./client/index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "cordis.patch.yml",
+    "src",
+    "client",
+    "locale/*.json",
+    "docs",
+    "icon.svg"
+  ],
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "~4.1.0",
+    "@deepseek-ai/dsh-credentials": "0.2.2-rc.5",
+    "@deepseek-ai/dsh-error": "0.2.2-rc.5",
+    "@deepseek-ai/dsh-tools": "0.2.2-rc.5",
+    "@deepseek-ai/dsh-typert-protocol": "0.2.2-rc.5",
+    "@deepseek-ai/schemastery": "~3.19.0"
+  },
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "inject": ["@deepseek-ai/dsh-client-ui-plugin-manager"]
+    }
+  }
+}

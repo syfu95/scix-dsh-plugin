@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "title": "SciX literature assistant",
+    "description": "Search ADS/SciX astronomy literature, analyze citation networks, read arXiv full text as text only (never PDF), and export BibTeX/AASTeX/RIS citations deterministically, using your own free ADS API token.",
+    "detail": "docs/DETAIL.md"
+  },
+  "ui": {
+    "sectionLabel": "SciX API token settings",
+    "tokenLabel": "API token",
+    "tokenHint": "Create a free personal token on the ADS/SciX settings page and paste it here. The token is stored only in the local credential store, never in plugin config, and is never shown again after saving.",
+    "tokenPage": "Get an ADS token",
+    "tokenPlaceholder": "Paste your ADS/SciX API token",
+    "save": "Save",
+    "saving": "Saving…",
+    "verify": "Verify",
+    "verifying": "Verifying…",
+    "remove": "Remove",
+    "removing": "Removing…",
+    "saved": "Token saved.",
+    "removed": "Token removed.",
+    "tokenStored": "A token is stored",
+    "tokenAbsent": "No token stored",
+    "tokenSource": "(source: {source})",
+    "notWritable": "The current credential source is read-only; saving and removing are unavailable here.",
+    "errEmpty": "Enter a non-empty token first.",
+    "saveFailed": "Save failed: {message}",
+    "removeFailed": "Remove failed: {message}",
+    "describeFailed": "Could not read credential status: {message}",
+    "verifyUnavailable": "Verify service unavailable: make sure the plugin is enabled and its Host core is loaded.",
+    "verifyFailed": "Verify call failed: {message}",
+    "verifyOk": "The token is valid.",
+    "verifyBad": "The token did not verify.",
+    "loading": "Reading credential status…"
+  }
+}

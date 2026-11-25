@@ -1,0 +1,8 @@
+# SciX literature plugin: one Host row.
+# The Client settings form attaches to 'plugins.row.config' key 'scix-dsh-plugin#scix'
+# (and/or 'plugins.bundle.config' key 'scix-dsh-plugin').
+# Non-secret defaults come from the exported Schemastery Config in src/index.js;
+# the ADS token is a credential (ctx.credentials), never row config.
+- insert:
+    - id: scix
+      name: scix-dsh-plugin
