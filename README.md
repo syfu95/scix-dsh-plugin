@@ -103,28 +103,6 @@ git clone https://github.com/syfu95/scix-dsh-plugin.git
 | `apiBaseUrl` | `https://api.adsabs.harvard.edu/v1` | API 根地址；可改为 `https://api.scixplorer.org/v1`（SciX 主机） |
 | `requestTimeoutMs` | `30000` | 单请求超时（毫秒） |
 
-## 验收标准
-
-以下清单来自 [Agent.md](Agent.md) §6，原样列出：
-
-- [ ] 在 DSH 中配置有效 Token 后，`search("JWST NIRSpec exoplanet atmosphere", limit=10)` 返回 10 条以内真实文献，且每条包含可验证的 bibcode。
-- [ ] 对一篇有正文的论文调用 `read_paper`，返回的文本内容非空，且不包含 PDF 二进制或下载链接。
-- [ ] 对某篇论文调用 `citation_traverse(direction="forward")`，返回的施引文献数量与 ADS 网页端同一 bibcode 的引用数一致（允许 API 缓存延迟）。
-- [ ] `export_citation(bibcodes, format="bibtex")` 输出的条目，抽查 3 条，作者、年份、DOI 与 ADS 页面完全一致。
-- [ ] 连续快速触发 20 次 `search`，插件不返回 `429` 未处理错误，最终所有请求完成或给出明确的退避提示。
-- [ ] 卸载插件后，DSH 会话中不再出现该插件的工具注册项。
-
-**验证说明**：前 5 项需用户配置真实有效的 ADS Token 后在真实 API 上验证；第 6 项（卸载后工具注册消失）无需 Token 即可验证。第 2 项请选择带有 HTML/ar5iv 渲染的 arXiv 论文（见“能力与诚实边界”）；`body_available` 按篇探测，绝不假定。
-
-## 开发与测试
-
-- **零运行时依赖**：`package.json` 不声明 `dependencies`；`@deepseek-ai/*` 仅作为 `peerDependencies` 声明，运行时由 DSH 安装提供。
-- **纯 ESM**（`"type": "module"`）。
-- **单元测试**：`node --test`，测试文件位于 `test/core/` 与 `test/tools/`（`*.test.js`），仅使用 `node:test` + `node:assert`，无外部测试依赖；系统 Node.js ≥ 22 即可运行。
-- **Mock fetch**：测试绝不请求真实 ADS API——以 stub 替换 `globalThis.fetch`，断言队列/退避/配额行为、标识符原样、显式 `body_available` 与确定性导出。
-- **语法门**：每个 JS 文件须通过 `node --check <file>`。
-- `src/contracts/**` 与纯助手模块保持零依赖，可被普通 Node 直接导入；引用 `@deepseek-ai/*` 的模块只在 DSH 运行时内加载。
-
 ## 许可
 
 [MIT](LICENSE) © 2026 syfu95

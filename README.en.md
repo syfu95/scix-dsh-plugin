@@ -103,28 +103,6 @@ Then follow Option 1, using the absolute path of the cloned directory as `target
 | `apiBaseUrl` | `https://api.adsabs.harvard.edu/v1` | API root URL; can be changed to `https://api.scixplorer.org/v1` (SciX host) |
 | `requestTimeoutMs` | `30000` | Per-request timeout in milliseconds |
 
-## Acceptance Criteria
-
-The following checklist is reproduced verbatim from [Agent.md](Agent.md) §6 (translated):
-
-- [ ] With a valid token configured in DSH, `search("JWST NIRSpec exoplanet atmosphere", limit=10)` returns at most 10 real papers, each containing a verifiable bibcode.
-- [ ] Calling `read_paper` on a paper with available body text returns non-empty text content containing no PDF binary or download links.
-- [ ] Calling `citation_traverse(direction="forward")` on a paper returns a citing-paper count consistent with the citation count shown on the ADS website for the same bibcode (API cache lag allowed).
-- [ ] Spot-check 3 entries from `export_citation(bibcodes, format="bibtex")` output: authors, year, and DOI match the ADS page exactly.
-- [ ] Triggering `search` 20 times in rapid succession produces no unhandled `429` errors; all requests eventually complete or yield an explicit backoff message.
-- [ ] After the plugin is unloaded, its tool registrations no longer appear in DSH sessions.
-
-**Verification notes**: items 1–5 require the user to configure a real, valid ADS token and verify against the live API; item 6 (tool registrations disappear after unload) can be verified without a token. For item 2, choose an arXiv paper with an HTML/ar5iv rendering (see "Capabilities and Honest Boundaries"); `body_available` is probed per paper, never assumed.
-
-## Development and Testing
-
-- **Zero runtime dependencies**: `package.json` declares no `dependencies`; `@deepseek-ai/*` packages appear only as `peerDependencies` and are provided by the DSH installation at runtime.
-- **Pure ESM** (`"type": "module"`).
-- **Unit tests**: `node --test`, with test files under `test/core/` and `test/tools/` (`*.test.js`), using only `node:test` + `node:assert` and no external test dependencies; system Node.js ≥ 22 is sufficient.
-- **Mock fetch**: tests never hit the real ADS API — `globalThis.fetch` is stubbed to assert queue/backoff/quota behavior, verbatim identifiers, explicit `body_available`, and deterministic exports.
-- **Syntax gate**: every JS file must pass `node --check <file>`.
-- `src/contracts/**` and pure helper modules stay dependency-free so plain Node can import them; modules referencing `@deepseek-ai/*` load only inside the DSH runtime.
-
 ## License
 
 [MIT](LICENSE) © 2026 syfu95
